@@ -1,15 +1,24 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 ">
             {{ __('Dashboard') }}
         </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
-    </div>
+        <h3 class="mt-5 font-semibold text-xl">Categorias</h3>
+        <ul class="flex justify-between">
+            @foreach ($categories as $category)
+                <li class="">
+                    <a class="" href="{{ route('posts.category', $category) }}">{{ $category->name }}</a>
+                </li>
+            @endforeach
+        </ul>
+        <h3 class="mt-5 font-semibold text-xl">Tags</h3>
+        <ul class="flex justify-between">
+            @foreach ($tags as $tag)
+                <li class="">
+                    <a class="" href="{{ route('posts.tag', $tag) }}">{{ $tag->name }}</a>
+                </li>
+            @endforeach
+        </ul>
+    </x-slot>
 </x-app-layout>
