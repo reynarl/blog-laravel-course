@@ -2,13 +2,9 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Inicio</h1>
+    <h1>Dashboard</h1>
 @stop
 
 @section('content')
-    <p>Bienvenido al panel.</p>
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+    <h2>BIENVENIDO ADMIN</h2>
 @stop
